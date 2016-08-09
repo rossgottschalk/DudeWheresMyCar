@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		5BBF65341D5A55AD0063B032 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF65331D5A55AD0063B032 /* main.m */; };
 		5BBF65371D5A55AD0063B032 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF65361D5A55AD0063B032 /* AppDelegate.m */; };
-		5BBF653A1D5A55AD0063B032 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF65391D5A55AD0063B032 /* ViewController.m */; };
+		5BBF653A1D5A55AD0063B032 /* CarMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF65391D5A55AD0063B032 /* CarMapViewController.m */; };
 		5BBF653D1D5A55AD0063B032 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BBF653B1D5A55AD0063B032 /* Main.storyboard */; };
 		5BBF65401D5A55AD0063B032 /* DudeWheresMyCar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF653E1D5A55AD0063B032 /* DudeWheresMyCar.xcdatamodeld */; };
 		5BBF65421D5A55AD0063B032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BBF65411D5A55AD0063B032 /* Assets.xcassets */; };
 		5BBF65451D5A55AD0063B032 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BBF65431D5A55AD0063B032 /* LaunchScreen.storyboard */; };
+		5BBF654D1D5A57240063B032 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BBF654C1D5A57240063B032 /* MapKit.framework */; };
+		5BBF65501D5A6B400063B032 /* PinMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF654F1D5A6B400063B032 /* PinMark.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +23,16 @@
 		5BBF65331D5A55AD0063B032 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BBF65351D5A55AD0063B032 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5BBF65361D5A55AD0063B032 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5BBF65381D5A55AD0063B032 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5BBF65391D5A55AD0063B032 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5BBF65381D5A55AD0063B032 /* CarMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarMapViewController.h; sourceTree = "<group>"; };
+		5BBF65391D5A55AD0063B032 /* CarMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarMapViewController.m; sourceTree = "<group>"; };
 		5BBF653C1D5A55AD0063B032 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BBF653F1D5A55AD0063B032 /* DudeWheresMyCar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DudeWheresMyCar.xcdatamodel; sourceTree = "<group>"; };
 		5BBF65411D5A55AD0063B032 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BBF65441D5A55AD0063B032 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BBF65461D5A55AD0063B032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BBF654C1D5A57240063B032 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5BBF654E1D5A6B400063B032 /* PinMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinMark.h; sourceTree = "<group>"; };
+		5BBF654F1D5A6B400063B032 /* PinMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinMark.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BBF654D1D5A57240063B032 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +50,7 @@
 		5BBF65261D5A55AD0063B032 = {
 			isa = PBXGroup;
 			children = (
+				5BBF654C1D5A57240063B032 /* MapKit.framework */,
 				5BBF65311D5A55AD0063B032 /* DudeWheresMyCar */,
 				5BBF65301D5A55AD0063B032 /* Products */,
 			);
@@ -62,8 +69,10 @@
 			children = (
 				5BBF65351D5A55AD0063B032 /* AppDelegate.h */,
 				5BBF65361D5A55AD0063B032 /* AppDelegate.m */,
-				5BBF65381D5A55AD0063B032 /* ViewController.h */,
-				5BBF65391D5A55AD0063B032 /* ViewController.m */,
+				5BBF65381D5A55AD0063B032 /* CarMapViewController.h */,
+				5BBF65391D5A55AD0063B032 /* CarMapViewController.m */,
+				5BBF654E1D5A6B400063B032 /* PinMark.h */,
+				5BBF654F1D5A6B400063B032 /* PinMark.m */,
 				5BBF653B1D5A55AD0063B032 /* Main.storyboard */,
 				5BBF65411D5A55AD0063B032 /* Assets.xcassets */,
 				5BBF65431D5A55AD0063B032 /* LaunchScreen.storyboard */,
@@ -153,8 +162,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BBF65401D5A55AD0063B032 /* DudeWheresMyCar.xcdatamodeld in Sources */,
-				5BBF653A1D5A55AD0063B032 /* ViewController.m in Sources */,
+				5BBF653A1D5A55AD0063B032 /* CarMapViewController.m in Sources */,
 				5BBF65371D5A55AD0063B032 /* AppDelegate.m in Sources */,
+				5BBF65501D5A6B400063B032 /* PinMark.m in Sources */,
 				5BBF65341D5A55AD0063B032 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
