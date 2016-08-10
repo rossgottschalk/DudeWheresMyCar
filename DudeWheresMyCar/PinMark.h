@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
 @interface PinMark : NSObject
+@property (nonatomic) double latitudeLocal;
+@property (nonatomic) double longitudeLocal;
+
 
 @end

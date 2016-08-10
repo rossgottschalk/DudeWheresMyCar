@@ -8,11 +8,16 @@
 
 #import "CarMapViewController.h"
 #import <MapKit/MapKit.h>
+#import "PinMark.h"
 
 @interface CarMapViewController () <CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) NSMutableArray *annotations;
 @property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) PinMark *currentLocation;
+@property (strong, nonatomic) NSMutableArray *locations;
+
+
 
 
 
@@ -97,16 +102,23 @@
     CLLocation *location = [locations lastObject];
     [self enableLocationManager:NO];
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    self.currentLocation.latitudeLocal = location.coordinate.latitude;
+    self.currentLocation.longitudeLocal = location.coordinate.longitude;
     annotation.coordinate = location.coordinate;
-    annotation.title = @"The Iron Yard";
+    annotation.title = @"Current Location";
     [self.annotations addObject:annotation];
-    //configure annotations method is now dependent on finding our location first
+    [self.locations addObject:self.currentLocation];
+    
+    //Zoom zoom zoom
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 2000, 2000);
+    [self.mapView setRegion:viewRegion animated:YES];
+    
 }
 
 
 - (IBAction)addPinPressed:(UIBarButtonItem *)sender
 {
-    
+    [self.mapView addAnnotations:self.annotations];
 }
-
+    
 @end
